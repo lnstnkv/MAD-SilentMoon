@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rootLayout"
+    tools:context=".reminders.RemindersActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textViewWhatTime"
+            style="@style/TextQuestion"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="49dp"
+            android:layout_marginEnd="81dp"
+            android:paddingEnd="80dp"
+            android:text="@string/like"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewChooseTime"
+            style="@style/TextPhrase"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="@dimen/margin_top"
+            android:layout_marginEnd="20dp"
+            android:text="@string/choose"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewWhatTime" />
+
+        <TimePicker
+            android:id="@+id/timePicker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="@dimen/margin_top"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/selector_background"
+            android:colorControlNormal="@color/timer"
+            android:textColorPrimary="@color/black_time"
+            android:timePickerMode="spinner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewChooseTime" />
+
+        <TextView
+            android:id="@+id/textViewWhichDay"
+            style="@style/TextQuestion"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="100dp"
+            android:text="@string/date_meditate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/timePicker" />
+
+        <TextView
+            android:id="@+id/textViewChooseDate"
+            style="@style/TextPhrase"
+            android:layout_marginStart="@dimen/indent"
+            android:layout_marginTop="@dimen/margin_top"
+            android:layout_marginEnd="@dimen/indent"
+            android:text="@string/every_day_meditate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewWhichDay" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewChooseDate">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipSunday"
+                android:layout_width="41dp"
+                android:layout_height="41dp"
+                android:checkable="false"
+                android:text="@string/sunday"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                app:chipBackgroundColor="@color/white"
+                app:chipMinTouchTargetSize="-1dp"
+                app:chipStrokeColor="@color/grey_200"
+                app:chipStrokeWidth="1dp"
+                app:layout_constraintEnd_toStartOf="@+id/chipMonday"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewChooseDate"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipMonday"
+                android:layout_width="41dp"
+                android:layout_height="41dp"
+                android:checked="true"
+                android:text="@string/monday"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                app:chipBackgroundColor="@color/color_chip"
+                app:chipMinTouchTargetSize="0dp"
+                app:chipStrokeColor="@color/grey_200"
+                app:chipStrokeWidth="1dp"
+                app:layout_constraintEnd_toStartOf="@+id/chipTuesday"
+                app:layout_constraintStart_toEndOf="@+id/chipSunday"
+                app:layout_constraintTop_toBottomOf="@+id/textViewChooseDate"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipTuesday"
+                android:layout_width="41dp"
+                android:layout_height="41dp"
+                android:checkable="false"
+                android:text="@string/tuesday"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                app:chipBackgroundColor="@color/white"
+                app:chipMinTouchTargetSize="0dp"
+                app:chipStrokeColor="@color/grey_200"
+                app:chipStrokeWidth="1dp"
+                app:layout_constraintEnd_toStartOf="@+id/chipWednesday"
+                app:layout_constraintStart_toEndOf="@+id/chipMonday"
+                app:layout_constraintTop_toBottomOf="@+id/textViewChooseDate"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipWednesday"
+                android:layout_width="41dp"
+                android:layout_height="41dp"
+                android:checkable="false"
+                android:text="@string/wednesday"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                app:chipBackgroundColor="@color/white"
+                app:chipMinTouchTargetSize="0dp"
+                app:chipStrokeColor="@color/grey_200"
+                app:chipStrokeWidth="1dp"
+                app:layout_constraintEnd_toStartOf="@+id/chipThursday"
+                app:layout_constraintStart_toEndOf="@+id/chipTuesday"
+                app:layout_constraintTop_toBottomOf="@+id/textViewChooseDate"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipThursday"
+                android:layout_width="41dp"
+                android:layout_height="41dp"
+                android:checked="false"
+                android:text="@string/thursday"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                app:chipBackgroundColor="@color/color_chip"
+                app:chipMinTouchTargetSize="0dp"
+                app:chipStrokeColor="@color/grey_200"
+                app:chipStrokeWidth="1dp"
+                app:layout_constraintEnd_toStartOf="@+id/chipFriday"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toEndOf="@+id/chipWednesday"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewChooseDate"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipFriday"
+                android:layout_width="41dp"
+                android:layout_height="41dp"
+                android:checkable="false"
+                android:text="@string/friday"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                app:chipBackgroundColor="@color/white"
+                app:chipMinTouchTargetSize="0dp"
+                app:chipStrokeColor="@color/grey_200"
+                app:chipStrokeWidth="1dp"
+                app:layout_constraintEnd_toStartOf="@+id/chipSaturday"
+                app:layout_constraintStart_toEndOf="@+id/chipThursday"
+                app:layout_constraintTop_toBottomOf="@+id/textViewChooseDate"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipSaturday"
+                android:layout_width="41dp"
+                android:layout_height="41dp"
+                android:checkable="false"
+                android:text="@string/saturday"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                app:chipBackgroundColor="@color/white"
+                app:chipMinTouchTargetSize="0dp"
+                app:chipStrokeColor="@color/grey_200"
+                app:chipStrokeWidth="1dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/chipFriday"
+                app:layout_constraintTop_toBottomOf="@+id/textViewChooseDate"
+                tools:ignore="TouchTargetSizeCheck" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <Button
+            android:id="@+id/buttonSave"
+            style="@style/Button"
+            android:layout_marginStart="@dimen/margin_start_button"
+            android:layout_marginTop="27dp"
+            android:layout_marginEnd="@dimen/margin_end_button"
+            android:text="@string/save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chipGroupDate" />
+
+        <Button
+            android:id="@+id/buttonNoThanks"
+            style="@style/Button.Ghoast"
+            android:layout_marginStart="@dimen/margin_start_button"
+            android:layout_marginEnd="@dimen/margin_end_button"
+            android:layout_marginBottom="8dp"
+            android:text="@string/Thank"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonSave" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

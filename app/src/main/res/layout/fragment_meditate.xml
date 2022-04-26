@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.MeditateFragment">
+
+    <TextView
+        android:id="@+id/textViewMeditate"
+        style="@style/TextQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="154dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="154dp"
+        android:text="@string/meditate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewPhraseMeditate"
+        style="@style/TextPhrase"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        android:text="@string/phrase_meditate"
+        android:textAlignment="center"
+        android:textColor="@color/grey_250"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMeditate"
+        tools:ignore="TextContrastCheck" />
+
+    <HorizontalScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPhraseMeditate"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioButtonAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:button="@null"
+                android:checked="false"
+                android:drawableTop="@drawable/ic_all"
+                android:text="@string/all_word"
+                android:textAlignment="center"
+                android:textColor="@color/grey_250"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioButton
+                android:id="@+id/radioButtonMy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:button="@null"
+                android:checked="false"
+                android:drawableTop="@drawable/ic_my"
+                android:text="@string/my_word"
+                android:textAlignment="center"
+                android:textColor="@color/grey_250"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/radioButtonAll"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioButton
+                android:id="@+id/radioButtonAnxious"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:button="@null"
+                android:checked="false"
+                android:drawableTop="@drawable/ic_smile"
+                android:text="@string/anxious"
+                android:textAlignment="center"
+                android:textColor="@color/grey_250"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/radioButtonMy"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioButton
+                android:id="@+id/radioButtonSleep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:button="@null"
+                android:checked="false"
+                android:drawableTop="@drawable/ic_sleep_meditate"
+                android:text="@string/sleep"
+                android:textAlignment="center"
+                android:textColor="@color/grey_250"
+                app:layout_constraintStart_toEndOf="@+id/radioButtonAnxious"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioButton
+                android:id="@+id/radioButtonKids"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:button="@null"
+                android:checked="false"
+                android:drawableTop="@drawable/ic_kids_"
+                android:text="@string/kids"
+                android:textAlignment="center"
+                android:textColor="@color/grey_250"
+                app:layout_constraintStart_toEndOf="@+id/radioButtonSleep"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </HorizontalScrollView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageViewDailyCalm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/ic_daily_calm"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewDailyCalm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="27dp"
+                android:text="@string/daily_calm"
+                android:textColor="@color/grey"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/imageViewDailyCalm"
+                app:layout_constraintTop_toTopOf="@+id/imageViewDailyCalm" />
+
+            <TextView
+                android:id="@+id/textViewApr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/apr_word"
+                android:textColor="@color/word_meditate"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="@+id/imageViewDailyCalm"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDailyCalm" />
+
+            <ToggleButton
+                android:id="@+id/toggleButtonPlayMusic"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="27dp"
+                android:background="@drawable/ic_toggle"
+                android:textOff="@null"
+                android:textOn="@null"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewDailyCalm"
+                app:layout_constraintEnd_toEndOf="@+id/imageViewDailyCalm"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/textViewPractise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/pause_practice"
+                android:textColor="@color/word_meditate"
+                android:textSize="11sp"
+                app:layout_constraintStart_toEndOf="@+id/textViewPoint"
+                app:layout_constraintTop_toTopOf="@+id/textViewPoint" />
+
+            <ImageView
+                android:id="@+id/imageViewDaysOfCalm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/ic_mountains"
+                app:layout_constraintEnd_toStartOf="@+id/imageViewAnxiet"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewDailyCalm" />
+
+            <ImageView
+                android:id="@+id/imageViewAnxiet"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_forest"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageViewDaysOfCalm"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewDailyCalm" />
+
+            <ImageView
+                android:id="@+id/imageViewBeach"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="12dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_beach"
+                app:layout_constraintEnd_toStartOf="@+id/imageViewField"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewDaysOfCalm" />
+
+            <ImageView
+                android:id="@+id/imageViewField"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/ic_field"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewBeach"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageViewBeach" />
+
+            <TextView
+                android:id="@+id/textViewDaysCalm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:text="@string/days_calm"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewDaysOfCalm"
+                app:layout_constraintEnd_toEndOf="@+id/imageViewDaysOfCalm"
+                app:layout_constraintStart_toStartOf="@+id/imageViewDaysOfCalm" />
+
+            <TextView
+                android:id="@+id/textViewAnxiet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="@string/anxiet_release"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewAnxiet"
+                app:layout_constraintEnd_toEndOf="@+id/imageViewAnxiet"
+                app:layout_constraintStart_toStartOf="@+id/imageViewAnxiet" />
+
+            <TextView
+                android:id="@+id/textViewPoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/point"
+                android:textColor="@color/word_meditate"
+                android:textSize="11sp"
+                app:layout_constraintStart_toEndOf="@+id/textViewApr"
+                app:layout_constraintTop_toTopOf="@+id/textViewApr" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

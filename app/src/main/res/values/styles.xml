@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Title">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="fontFamily">@font/robotomedium</item>
+    </style>
+
+    <style name="ButtonHome">
+        <item name="cornerRadius">30dp</item>
+    </style>
+
+    <style name="Button">
+        <item name="cornerRadius">30dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:paddingBottom">24dp</item>
+        <item name="android:paddingTop">24dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/grey_100</item>
+        <item name="backgroundTint">@color/violet</item>
+    </style>
+
+    <style name="Button.Ghoast">
+
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <style name="TextQuestion">
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+    </style>
+
+    <style name="TextPhrase">
+        <item name="android:textColor">@color/grey_200</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+    </style>
+
+    <style name="TextSleep">
+        <item name="android:textColor">@color/sleep_word</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="SleepTime">
+        <item name="android:textColor">@color/sleep_time</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="SleepTimeSmall">
+        <item name="android:textColor">@color/grey_200</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+</resources>

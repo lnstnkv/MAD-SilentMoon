@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sleep_background"
+    android:fitsSystemWindows="true"
+    tools:context=".playoption.PlayOptionActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/sleep_background"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|snap">
+
+            <ImageView
+                android:id="@+id/backgroundImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_collapseMode="parallax"
+                app:srcCompat="@drawable/ic_play_option_background" />
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbarControls"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="15dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:navigationIcon="@drawable/ic_back">
+
+                <ImageView
+                    android:id="@+id/imageViewDownload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    app:srcCompat="@drawable/ic_save_sleep" />
+
+                <ImageView
+                    android:id="@+id/imageViewLike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="15dp"
+                    app:srcCompat="@drawable/ic_like_sleep" />
+
+            </com.google.android.material.appbar.MaterialToolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|snap|enterAlways">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/centerGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="206dp" />
+
+            <TextView
+                android:id="@+id/textViewTitle"
+                style="@style/TextQuestion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginStart="@dimen/indent"
+                android:layout_marginTop="30dp"
+                android:text="@string/night_island"
+                android:textColor="@color/sleep_word"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewCourse"
+                style="@style/SleepTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/sleep_music"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/textViewTitle"
+                app:layout_constraintStart_toStartOf="@id/textViewTitle"
+                app:layout_constraintTop_toBottomOf="@id/textViewTitle" />
+
+            <TextView
+                android:id="@+id/textViewPhraseCourse"
+                style="@style/SleepTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/play_option_phrase"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@id/textViewCourse"
+                app:layout_constraintStart_toStartOf="@id/textViewCourse"
+                app:layout_constraintTop_toBottomOf="@id/textViewCourse" />
+
+            <ImageView
+                android:id="@+id/imageViewFavourites"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_like_white"
+                app:layout_constraintBottom_toBottomOf="@id/textViewFavourites"
+                app:layout_constraintStart_toStartOf="@id/textViewPhraseCourse"
+                app:layout_constraintTop_toTopOf="@id/textViewFavourites" />
+
+            <TextView
+                android:id="@+id/textViewFavourites"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/favourites"
+                android:textColor="@color/sleep_word"
+                app:layout_constraintEnd_toStartOf="@id/centerGuideline"
+                app:layout_constraintStart_toEndOf="@id/imageViewFavourites"
+                app:layout_constraintTop_toBottomOf="@id/textViewPhraseCourse" />
+
+            <ImageView
+                android:id="@+id/imageViewListening"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/ic_headphones_white"
+                app:layout_constraintBottom_toBottomOf="@id/textViewListening"
+                app:layout_constraintStart_toEndOf="@id/centerGuideline"
+                app:layout_constraintTop_toTopOf="@id/textViewListening" />
+
+            <TextView
+                android:id="@+id/textViewListening"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/listening"
+                android:textColor="@color/sleep_word"
+                app:layout_constraintEnd_toEndOf="@id/textViewPhraseCourse"
+                app:layout_constraintStart_toEndOf="@id/imageViewListening"
+                app:layout_constraintTop_toBottomOf="@id/textViewPhraseCourse" />
+
+            <TextView
+                android:id="@+id/textViewRelated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="60dp"
+                android:text="@string/related"
+                android:textColor="@color/sleep_word"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewFavourites" />
+
+            <ScrollView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewRelated">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+                    <ImageView
+                        android:id="@+id/imageViewMoonOption"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="10dp"
+                        app:layout_constraintEnd_toStartOf="@+id/imageViewSweetOption"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_moon_clouds" />
+
+                    <ImageView
+                        android:id="@+id/imageViewSweetOption"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageViewMoonOption"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_sweet_sleep" />
+
+                    <TextView
+                        android:id="@+id/textViewMoonOption"
+                        style="@style/TextSleep"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/moon_clouds"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageViewMoonOption" />
+
+                    <TextView
+                        android:id="@+id/textViewTimeOption"
+                        style="@style/SleepTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="@string/sleep_music"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewMoonOption" />
+
+                    <TextView
+                        android:id="@+id/textViewSweetOption"
+                        style="@style/TextSleep"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="96dp"
+                        android:text="@string/sweet_sleep"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageViewSweetOption" />
+
+                    <TextView
+                        android:id="@+id/textViewTimeOption2"
+                        style="@style/SleepTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="82dp"
+                        android:text="@string/sleep_music"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewSweetOption" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </ScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonPlayOption"
+        style="@style/Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="@dimen/indent"
+        android:layout_marginBottom="@dimen/indent"
+        android:paddingStart="@dimen/indent"
+        android:paddingEnd="@dimen/indent"
+        android:text="@string/play" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

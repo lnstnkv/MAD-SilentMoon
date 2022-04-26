@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey">#3F414E</color>
+    <color name="grey_200">#A1A4B2</color>
+    <color name="grey_250">#A0A3B1</color>
+    <color name="violet">#8E97FD</color>
+    <color name="grey_100">#F6F1FB</color>
+    <color name="violet_700">#7583CA</color>
+    <color name="white_100">#EBEAEC</color>
+    <color name="background_violet">#8C96FF</color>
+    <color name="grey_150">#F2F3F7</color>
+    <color name="beige">#FFECCC</color>
+    <color name="black_time">#263238</color>
+    <color name="clock_back">#F5F5F9</color>
+    <color name="timer">#E1E1E5</color>
+    <color name="text_home">#F7E8D0</color>
+    <color name="title_home_ic">#FFECCC</color>
+    <color name="title_black_home">#524F53</color>
+    <color name="word_meditate">#5A6175</color>
+    <color name="sleep_word">#E6E7F2</color>
+    <color name="ocean">#FFE7BF</color>
+    <color name="while_sleep">#F9F9FF</color>
+    <color name="sleep_time">#98A1BD</color>
+    <color name="sleep_background">#03174C</color>
+    <color name="improve_word">#FEF9F3</color>
+</resources>

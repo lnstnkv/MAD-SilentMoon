@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".home.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/textViewSilentHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="10dp"
+        android:letterSpacing="0.2"
+        android:text="@string/silent"
+        android:textColor="@color/grey"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewLogoHome"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewLogoHome"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="46dp"
+        app:layout_constraintEnd_toStartOf="@+id/textViewMoonHome"
+        app:layout_constraintStart_toEndOf="@+id/textViewSilentHome"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_logo" />
+
+    <TextView
+        android:id="@+id/textViewMoonHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="51dp"
+        android:letterSpacing="0.2"
+        android:text="@string/moon"
+        android:textColor="@color/grey"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageViewLogoHome"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewGoodMorning"
+            style="@style/TextQuestion"
+            android:layout_width="317dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="79dp"
+            android:text="@string/good_morning"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.158"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewLogoHome" />
+
+        <TextView
+            android:id="@+id/textViewWishes"
+            style="@style/TextPhrase"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="76dp"
+            android:text="@string/wish"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.512"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewGoodMorning" />
+
+    <ImageView
+        android:id="@+id/imageViewBasics"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/indent"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="10dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:constraintSet="@null"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewRelaxtion"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewWishes"
+        app:srcCompat="@drawable/ic_basics" />
+
+    <ImageView
+        android:id="@+id/imageViewRelaxtion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="@dimen/indent"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageViewBasics"
+        app:layout_constraintTop_toBottomOf="@+id/textViewWishes"
+        app:srcCompat="@drawable/ic_relaxtion" />
+
+    <TextView
+        android:id="@+id/textViewTimeBacisc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="28dp"
+        android:text="@string/time"
+        android:textColor="@color/white_100"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewBasics"
+        app:layout_constraintEnd_toStartOf="@+id/buttonStartWhite"
+        app:layout_constraintHorizontal_bias="0.153"
+        app:layout_constraintStart_toStartOf="@+id/imageViewBasics" />
+
+    <ImageView
+        android:id="@+id/imageViewDailyThought"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="@dimen/indent"
+        android:layout_marginEnd="20dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewBasics"
+        app:srcCompat="@drawable/ic_daily" />
+
+    <TextView
+        android:id="@+id/textViewBasics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="85dp"
+        android:text="@string/basics"
+        android:textColor="@color/title_home_ic"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/imageViewBasics"
+        app:layout_constraintTop_toTopOf="@+id/imageViewBasics" />
+
+    <TextView
+        android:id="@+id/textViewCourseTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/course"
+        android:textColor="@color/text_home"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="@+id/imageViewBasics"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBasics" />
+
+    <TextView
+        android:id="@+id/textViewRelaxtion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="85dp"
+        android:text="@string/relaxation"
+        android:textColor="@color/grey"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/imageViewRelaxtion"
+        app:layout_constraintTop_toTopOf="@+id/imageViewRelaxtion" />
+
+    <TextView
+        android:id="@+id/textViewMusicHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/music"
+        android:textColor="@color/title_black_home"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="@+id/imageViewRelaxtion"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRelaxtion" />
+
+    <TextView
+        android:id="@+id/textViewTimeRelaxation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/time"
+        android:textColor="@color/title_black_home"
+        android:textSize="11sp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewRelaxtion"
+        app:layout_constraintEnd_toStartOf="@+id/buttonStartBlack"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageViewRelaxtion" />
+
+    <TextView
+        android:id="@+id/textViewDailyThough"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="27dp"
+        android:text="@string/daily"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/imageViewDailyThought"
+        app:layout_constraintTop_toTopOf="@+id/imageViewDailyThought" />
+
+    <TextView
+        android:id="@+id/textViewMeditationHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginBottom="27dp"
+        android:text="@string/meditation"
+        android:textColor="@color/white_100"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewDailyThought"
+        app:layout_constraintStart_toStartOf="@+id/imageViewDailyThought" />
+
+    <TextView
+        android:id="@+id/textViewTimeHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginBottom="27dp"
+        android:text="@string/time"
+        android:textColor="@color/white_100"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewDailyThought"
+        app:layout_constraintStart_toEndOf="@+id/textViewMeditationHome" />
+
+    <Button
+        android:id="@+id/buttonStartBlack"
+        style="@style/ButtonHome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="@color/grey"
+        android:paddingTop="11dp"
+        android:paddingBottom="11dp"
+        android:text="@string/start"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewRelaxtion"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewRelaxtion" />
+
+    <Button
+        android:id="@+id/buttonStartWhite"
+        style="@style/ButtonHome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="@color/white_100"
+        android:paddingTop="11dp"
+        android:paddingBottom="11dp"
+        android:text="@string/start"
+        android:textAlignment="center"
+        android:textColor="@color/grey"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewBasics"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewBasics" />
+
+        <TextView
+            android:id="@+id/textViewRecommended"
+            style="@style/TextQuestion"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="117dp"
+            android:text="@string/recomended"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewDailyThought" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewRecommended">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageViewFocus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    app:layout_constraintEnd_toStartOf="@+id/imageViewHappiness"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_focus" />
+
+                <ImageView
+                    android:id="@+id/imageViewHappiness"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewFocus"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_happiness" />
+
+                <TextView
+                    android:id="@+id/textViewFocus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/focus"
+                    android:textColor="@color/grey"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/textViewMeditation2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imageViewFocus" />
+
+                <TextView
+                    android:id="@+id/textViewMeditation2"
+                    style="@style/SleepTimeSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginBottom="27dp"
+                    android:text="@string/meditation"
+                    android:textColor="@color/grey_200"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewPoint3"
+                    style="@style/SleepTimeSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/point"
+                    android:textColor="@color/grey_200"
+                    android:textSize="11sp"
+                    app:layout_constraintStart_toEndOf="@+id/textViewMeditation2"
+                    app:layout_constraintTop_toTopOf="@+id/textViewMeditation2" />
+
+                <TextView
+                    android:id="@+id/textViewTimeHome2"
+                    style="@style/SleepTimeSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/time"
+                    android:textColor="@color/grey_200"
+                    android:textSize="11sp"
+                    app:layout_constraintStart_toEndOf="@+id/textViewPoint3"
+                    app:layout_constraintTop_toTopOf="@+id/textViewPoint3" />
+
+                <TextView
+                    android:id="@+id/textViewHappiness"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/happiness"
+                    android:textColor="@color/grey"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/textViewMeditaion2"
+                    app:layout_constraintStart_toEndOf="@+id/textViewFocus"
+                    app:layout_constraintTop_toBottomOf="@+id/imageViewHappiness"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/textViewMeditaion2"
+                    style="@style/SleepTimeSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginBottom="27dp"
+                    android:text="@string/meditation"
+                    android:textColor="@color/grey_200"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textViewTimeHome2" />
+
+                <TextView
+                    android:id="@+id/textViewPoint2"
+                    style="@style/SleepTimeSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/point"
+                    android:textColor="@color/grey_200"
+                    android:textSize="11sp"
+                    app:layout_constraintStart_toEndOf="@+id/textViewMeditaion2"
+                    app:layout_constraintTop_toTopOf="@+id/textViewMeditaion2" />
+
+                <TextView
+                    android:id="@+id/textViewTimeMeditate"
+                    style="@style/SleepTimeSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/time"
+                    android:textColor="@color/grey_200"
+                    android:textSize="11sp"
+                    app:layout_constraintStart_toEndOf="@+id/textViewPoint2"
+                    app:layout_constraintTop_toTopOf="@+id/textViewPoint2" />
+
+                <ImageView
+                    android:id="@+id/imageViewFocus2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/ic_focus"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewHappiness"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewFocus3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="84dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/focus"
+                    android:textColor="@color/grey"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/textViewHappiness"
+                    app:layout_constraintTop_toBottomOf="@+id/imageViewFocus2" />
+
+                <TextView
+                    android:id="@+id/textViewTime4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="42dp"
+                    android:text="@string/meditation"
+                    android:textColor="@color/grey_200"
+                    android:textSize="11sp"
+                    app:layout_constraintStart_toEndOf="@+id/textViewTimeMeditate"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewFocus3" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    style="@style/SleepTimeSmall"
+                    android:layout_width="4dp"
+                    android:layout_height="19dp"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/point"
+                    app:layout_constraintStart_toEndOf="@+id/textViewTime4"
+                    app:layout_constraintTop_toTopOf="@+id/textViewTime4" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    style="@style/SleepTimeSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/time"
+                    app:layout_constraintStart_toEndOf="@+id/textView"
+                    app:layout_constraintTop_toTopOf="@+id/textView" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </HorizontalScrollView>
+
+        <ToggleButton
+            android:id="@+id/toggleButtonPlayMusic"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="27dp"
+            android:background="@drawable/ic_play_home"
+
+            android:textOff="@null"
+            android:textOn="@null"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewDailyThought"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewDailyThought"
+            tools:ignore="TouchTargetSizeCheck" />" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

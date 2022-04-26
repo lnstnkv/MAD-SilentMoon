@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rootLayout"
+    tools:context=".signup.SignUpActivity"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageViewBack"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewCreateTitle"
+            style="@style/Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="@string/create"
+            android:textColor="@color/grey"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/buttonFacebookStart"
+            style="@style/Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_start_button"
+            android:layout_marginTop="@dimen/margin_top"
+            android:layout_marginEnd="@dimen/margin_end_button"
+            android:backgroundTint="@color/violet_700"
+            android:drawableLeft="@drawable/ic_facebook"
+            android:paddingStart="@dimen/padding_star_button"
+            android:paddingTop="@dimen/padding_top_button"
+            android:paddingEnd="@dimen/padding_end_button"
+            android:paddingBottom="@dimen/padding_bottom_button"
+            android:text="@string/facebook"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCreateTitle" />
+
+        <Button
+            android:id="@+id/buttonGoogleStart"
+            style="@style/Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_start_button"
+            android:layout_marginTop="@dimen/margin_top"
+            android:layout_marginEnd="@dimen/margin_end_button"
+            android:backgroundTint="@color/white_100"
+            android:drawableLeft="@drawable/ic_google"
+            android:paddingStart="@dimen/padding_star_button"
+            android:paddingTop="@dimen/padding_top_button"
+            android:paddingEnd="@dimen/padding_end_button"
+            android:paddingBottom="@dimen/padding_bottom_button"
+            android:text="@string/google"
+            android:textColor="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonFacebookStart" />
+
+        <TextView
+            android:id="@+id/textViewOrEmailStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top"
+            android:text="@string/or_email_up"
+            android:textColor="@color/grey_200"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonGoogleStart" />
+
+        <EditText
+            android:id="@+id/editTextEmailAddressStart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_start_button"
+            android:layout_marginTop="@dimen/margin_top"
+            android:layout_marginEnd="@dimen/margin_end_button"
+            android:background="@drawable/selector_background"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:paddingStart="17dp"
+            android:paddingTop="@dimen/padding_top_button"
+            android:paddingBottom="@dimen/padding_bottom_button"
+            android:text="@string/email"
+            android:textColor="@color/grey_200"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textEditlogin" />
+
+        <EditText
+            android:id="@+id/editTextPasswordStart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_start_button"
+            android:layout_marginTop="@dimen/margin_top"
+            android:layout_marginEnd="@dimen/margin_end_button"
+            android:background="@drawable/selector_background"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:paddingLeft="17dp"
+            android:paddingTop="@dimen/padding_top_button"
+            android:paddingBottom="@dimen/padding_bottom_button"
+            android:text="@string/password"
+            android:textColor="@color/grey_200"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextEmailAddressStart" />
+
+        <TextView
+            android:id="@+id/textEditlogin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_start_button"
+            android:layout_marginTop="@dimen/margin_top"
+            android:layout_marginEnd="@dimen/margin_end_button"
+            android:background="@drawable/selector_background"
+            android:paddingLeft="17dp"
+            android:paddingTop="@dimen/padding_top_button"
+            android:paddingBottom="@dimen/padding_bottom_button"
+            android:singleLine="true"
+            android:text="@string/login"
+            android:textColor="@color/grey_200"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewOrEmailStart" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewPrivacyPolice"
+            app:layout_constraintTop_toBottomOf="@+id/editTextPasswordStart" />
+
+        <TextView
+            android:id="@+id/textViewPrivace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="28dp"
+            android:text="@string/privace_policy_start"
+            android:textColor="@color/grey_200"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextPasswordStart" />
+
+        <Button
+            android:id="@+id/buttonGetStart"
+            style="@style/Button"
+            android:layout_marginStart="@dimen/margin_start_button"
+            android:layout_marginTop="54dp"
+            android:layout_marginEnd="@dimen/margin_end_button"
+            android:layout_marginBottom="32dp"
+            android:text="@string/get_started"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPrivace" />
+
+        <TextView
+            android:id="@+id/textViewPrivacyPolice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:text="@string/privace_policy_end"
+            android:textColor="@color/violet"
+            app:layout_constraintStart_toEndOf="@+id/textViewPrivace"
+            app:layout_constraintTop_toTopOf="@+id/textViewPrivace" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

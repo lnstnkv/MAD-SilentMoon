@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rootLayout"
+    tools:context=".choosetopic.ChooseTopicActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textViewQuestion"
+            style="@style/TextQuestion"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="134dp"
+            android:text="@string/brings"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewChooseTopic"
+            style="@style/TextPhrase"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/indent"
+            android:layout_marginTop="13dp"
+            android:text="@string/choose_topic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewtoSilentMoon" />
+
+        <ImageView
+            android:id="@+id/imageViewReduceStress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="10dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toStartOf="@+id/imageViewImprovePerfomance"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewChooseTopic"
+            app:srcCompat="@drawable/ic_meditate_girl_choose" />
+
+        <ImageView
+            android:id="@+id/imageViewImprovePerfomance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="20dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageViewReduceStress"
+            app:layout_constraintTop_toBottomOf="@+id/textViewChooseTopic"
+            app:srcCompat="@drawable/ic_improve_perfomance" />
+
+        <ImageView
+            android:id="@+id/imageViewIncreaseHappiness"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/imageViewReduceAnxietly"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewReduceStress"
+            app:srcCompat="@drawable/ic_increase_happiness" />
+
+        <ImageView
+            android:id="@+id/imageViewReduceAnxietly"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageViewIncreaseHappiness"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewImprovePerfomance"
+            app:srcCompat="@drawable/ic_group" />
+
+        <ImageView
+            android:id="@+id/imageViewPersonalGrowth"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/imageViewBetterSleep"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewIncreaseHappiness"
+            app:srcCompat="@drawable/ic_personal" />
+
+        <ImageView
+            android:id="@+id/imageViewBetterSleep"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageViewPersonalGrowth"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewReduceAnxietly"
+            app:srcCompat="@drawable/ic_better_sleep" />
+
+        <ImageView
+            android:id="@+id/imageViewReduseStressTwo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/imageViewWork"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewPersonalGrowth"
+            app:srcCompat="@drawable/ic_meditation_girl_topic" />
+
+        <ImageView
+            android:id="@+id/imageViewWork"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageViewReduseStressTwo"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewBetterSleep"
+            app:srcCompat="@drawable/ic_reduce_stress_two" />
+
+        <TextView
+            android:id="@+id/textViewReduceStress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/reduce_stress"
+            android:textAlignment="center"
+            android:textColor="@color/beige"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewReduceStress"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewReduceStress"
+            app:layout_constraintStart_toStartOf="@+id/imageViewReduceStress" />
+
+        <TextView
+            android:id="@+id/textViewImprovePerfomance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/improve_performance"
+            android:textColor="@color/improve_word"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewImprovePerfomance"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewImprovePerfomance"
+            app:layout_constraintStart_toStartOf="@+id/imageViewImprovePerfomance" />
+
+        <TextView
+            android:id="@+id/textViewIncrease"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="17dp"
+            android:text="@string/increase_happiness"
+            android:textColor="@color/grey"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewIncreaseHappiness"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewIncreaseHappiness"
+            app:layout_constraintStart_toStartOf="@+id/imageViewIncreaseHappiness" />
+
+        <TextView
+            android:id="@+id/textViewReduceAnx"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/reduce_anxiety"
+            android:textAlignment="center"
+            android:textColor="@color/grey"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewReduceAnxietly"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewReduceAnxietly"
+            app:layout_constraintStart_toStartOf="@+id/imageViewReduceAnxietly" />
+
+        <TextView
+            android:id="@+id/textViewPersonalGrowth"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="17dp"
+            android:text="@string/personal_growth"
+            android:textColor="@color/beige"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewPersonalGrowth"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewPersonalGrowth"
+            app:layout_constraintStart_toStartOf="@+id/imageViewPersonalGrowth" />
+
+        <TextView
+            android:id="@+id/textViewBetterSleep"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/better_sleep"
+            android:textColor="@color/white_100"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewBetterSleep"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewBetterSleep"
+            app:layout_constraintStart_toStartOf="@+id/imageViewBetterSleep" />
+
+        <TextView
+            android:id="@+id/textViewtoSilentMoon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/to_silent_moon"
+            android:textColor="@color/grey"
+            android:textSize="28sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewQuestion" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

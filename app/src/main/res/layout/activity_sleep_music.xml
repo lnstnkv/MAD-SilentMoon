@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/sleep_background"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".sleepmusic.SleepMusicActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/sleep_background"    >
+
+        <TextView
+            android:id="@+id/textView51"
+            style="@style/TextSleep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:text="@string/sleep_music_title"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbarControls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:paddingStart="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_back" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/indent"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="@dimen/indent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView51">
+
+            <ImageView
+                android:id="@+id/imageViewCloudsSleep"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toStartOf="@+id/imageViewOwlSleep"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_night_island" />
+
+            <ImageView
+                android:id="@+id/imageViewOwlSleep"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageViewCloudsSleep"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_sweet_sleep" />
+
+            <TextView
+                android:id="@+id/textViewNightIsland"
+                style="@style/TextSleep"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/night_island"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewCloudsSleep" />
+
+            <TextView
+                android:id="@+id/textViewTime"
+                style="@style/SleepTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sleep_music"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewNightIsland" />
+
+            <TextView
+                android:id="@+id/textViewSweetSleepMusic"
+                style="@style/TextSleep"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="76dp"
+                android:text="@string/sweet_sleep"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewOwlSleep" />
+
+            <TextView
+                android:id="@+id/textViewTitleSleep4"
+                style="@style/TextSleep"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="68dp"
+                android:text="@string/moon_clouds"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageSweetSlepp2" />
+
+            <TextView
+                android:id="@+id/textViewTitleSleep2"
+                style="@style/TextSleep"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="78dp"
+                android:text="@string/night_island"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageSweetSleep3" />
+
+            <TextView
+                android:id="@+id/textViewTime2"
+                style="@style/SleepTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="61dp"
+                android:text="@string/sleep_music"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewSweetSleepMusic" />
+
+
+            <ImageView
+                android:id="@+id/imageSweetSlepp2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageGoodNight2"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTime2"
+                app:srcCompat="@drawable/ic_moon_clouds_two" />
+
+            <ImageView
+                android:id="@+id/imageGoodNight2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toStartOf="@+id/imageSweetSlepp2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTime"
+                app:srcCompat="@drawable/ic_moon_clouds" />
+
+            <TextView
+                android:id="@+id/textViewTitleSleep3"
+                style="@style/TextSleep"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/good_night"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageGoodNight2" />
+
+            <TextView
+                android:id="@+id/textViewTitleSleep"
+                style="@style/TextSleep"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/sweet_sleep"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageGoodNight3" />
+
+            <TextView
+                android:id="@+id/textViewTimeSleep4"
+                style="@style/SleepTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="61dp"
+                android:text="@string/sleep_music"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitleSleep4" />
+
+            <TextView
+                android:id="@+id/textViewTimeSleep6"
+                style="@style/SleepTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="60dp"
+                android:text="@string/sleep_music"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitleSleep2" />
+
+            <TextView
+                android:id="@+id/textViewTimeSleep3"
+                style="@style/SleepTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sleep_music"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitleSleep3" />
+
+            <ImageView
+                android:id="@+id/imageSweetSleep3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageGoodNight3"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTimeSleep4"
+                app:srcCompat="@drawable/ic_night_island" />
+
+            <ImageView
+                android:id="@+id/imageGoodNight3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toStartOf="@+id/imageSweetSleep3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTimeSleep3"
+                app:srcCompat="@drawable/ic_sweet_sleep" />
+
+            <TextView
+                android:id="@+id/textViewTimeSleep5"
+                style="@style/SleepTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sleep_music"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitleSleep" />
+
+            <ImageView
+                android:id="@+id/imageGoodNight4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageSweetSlepp4"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTimeSleep6"
+                app:srcCompat="@drawable/ic_moon_clouds" />
+
+            <ImageView
+                android:id="@+id/imageSweetSlepp4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toStartOf="@+id/imageGoodNight4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTimeSleep5"
+                app:srcCompat="@drawable/ic_moon_clouds_two" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
